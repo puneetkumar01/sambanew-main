@@ -1,9 +1,9 @@
 class AppUrls {
   static const String appName = 'TicketerRama';
   static const double appVersion = 1.0;
-  static const String baseUrl = 'https://apifront.samba.events';
-  static const String baseLoginUrl = "https://api.samba.events";
-  static const String baseUrlMail = 'https://apimail.samba.events';
+  static const String baseUrl = 'https://apifrontv2.ticketer.sg';
+  static const String baseLoginUrl = 'https://apiloginv2.ticketer.sg';
+  static const String baseUrlMail = 'https://apimailv2.ticketer.sg';
   static const String socialLogins = '/FrontLogin/login-auth';
   static const String loginUrl = '/FrontLogin/signin-with-password';
   static const String signupUrl = '/FrontLogin/signup';
