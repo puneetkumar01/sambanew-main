@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://app.digio.in/#/gateway/esign -->
+<html lang="en" style="--primary-color: 41,121,191; --secondary-color: 255,255,255; left: 0px; top: 0px;" class="cdk-global-scrollblock"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Digio | Secure, Legal, Digital signing</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=10.0">
+  <script async="" src="./Digio _ Secure, Legal, Digital signing_files/clarity.js.download"></script><script async="" src="./Digio _ Secure, Legal, Digital signing_files/hutuhmazcf"></script><script async="" src="./Digio _ Secure, Legal, Digital signing_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    let href = window.location.href;
+    let paths = href.split('?')[0].split('/');
+    let gatewayIndex = paths.findIndex(function(path) {
+      return path == 'gateway';
+    });
+    var eventMeta = {};
+    if (gatewayIndex !== -1 && paths.length > gatewayIndex + 4 && paths[gatewayIndex + 1] == 'login') {
+      eventMeta.documentId = paths[gatewayIndex + 2];
+      eventMeta.txnId = paths[gatewayIndex + 3];
+      eventMeta.identifier = paths[gatewayIndex + 4];
+    }
+    let mandateDirect = paths.findIndex(function(path) {
+      return path == 'enach-mandate-direct';
+    });
+    if (mandateDirect !== -1 && paths.length > mandateDirect + 3) {
+      eventMeta.documentId = paths[mandateDirect + 1];
+      eventMeta.txnId = paths[mandateDirect + 2];
+      eventMeta.identifier = paths[mandateDirect + 3];
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-3TYGSS94N8', { 'send_page_view': false });
+    if (window.performance) {
+      // Gets the number of milliseconds since page load
+      // (and rounds the result since the value must be an integer).
+      let timeSincePageLoad = Math.round(performance.now());
+      // Sends the timing event to Google Analytics.
+      gtag('event', 'timing_complete', Object.assign({
+        'name': 'load',
+        'value': timeSincePageLoad,
+        'event_category': 'JS Dependencies'
+      }, eventMeta));
+    }
+  </script>
+  <script>
+    window.onerror = function(message, url, lineNo, columnNo, error) {
+      gtag('event', 'page_error', Object.assign({
+        error_line_number: lineNo,
+        error_message: message,
+        error_url: url
+      }, eventMeta));
+    };
+  </script>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="icon" type="image/x-icon" href="https://app.digio.in/favicon.ico">
+  <style>
+    .content-loader, .content-loader:after, .content-loader:before {
+      border-radius: 50%;
+      width: 1.7em;
+      height: 1.7em;
+      animation: 1.8s ease-in-out infinite bblFadInOut
+    }
+
+    .content-loader {
+      color: rgb(var(--primary-color));
+      font-size: 8px;
+      position: fixed;
+      text-indent: -9999em;
+      transform: translateZ(0);
+      animation-delay: -.16s;
+      top: calc(100% - 57%);
+    }
+
+    .content-loader:after, .content-loader:before {
+      content: '';
+      position: absolute;
+      top: 0
+    }
+
+    .content-loader:before {
+      left: -3.5em;
+      animation-delay: -.32s
+    }
+
+    .content-loader:after {
+      left: 3.5em
+    }
+
+    @keyframes bblFadInOut {
+      0%, 100%, 80% {
+        box-shadow: 0 2.5em 0 -1.3em
+      }
+      40% {
+        box-shadow: 0 2.5em 0 0
+      }
+    }
+  </style>
+<style>@import"https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap";@import"https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Indie+Flower&family=Pacifico&family=Rajdhani&family=Sacramento&family=Shadows+Into+Light&display=swap";@font-face{font-family:Helvetica;src:local("Helvetica"),url(Helvetica.8a191867dda12122.ttf) format("truetype")}*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Manrope,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}h1,h2{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}strong{font-weight:bolder}h1,h2,p{margin:0}ol,ul{list-style:none;margin:0;padding:0}img{display:block;vertical-align:middle}img{max-width:100%;height:auto}*{scrollbar-color:initial;scrollbar-width:initial}:root{--primary-color:41, 121, 191;--secondary-color:255, 255, 255;--client-font-family:"Halvetica"}*{-webkit-tap-highlight-color:rgba(0,0,0,0);text-underline-position:under}html{min-height:100%;display:flex;flex-direction:column}body{margin:0;--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity));font-family:Halvetica,Helvetica,Roboto,sans-serif,Arial;font-family:var(--client-font-family),Helvetica,Roboto,sans-serif,Arial;font-size:1rem;line-height:1.5rem;font-weight:300;--tw-text-opacity:1;color:rgb(28 28 28 / var(--tw-text-opacity));flex-grow:1}h1{font-size:1.25rem;line-height:1.75rem;--tw-text-opacity:1;color:rgb(28 28 28 / var(--tw-text-opacity))}@media (min-width: 768px){h1{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){h1{font-size:1.5rem;line-height:2rem}}h1{line-height:2.5rem;font-family:Halvetica,Helvetica,Roboto,sans-serif,Arial;font-family:var(--client-font-family),Helvetica,Roboto,sans-serif,Arial;font-weight:700;margin-bottom:.5rem}h2{font-size:1.125rem;line-height:1.75rem;--tw-text-opacity:1;color:rgb(28 28 28 / var(--tw-text-opacity))}@media (min-width: 1024px){h2{font-size:1.25rem;line-height:1.75rem}}h2{font-family:Halvetica,Helvetica,Roboto,sans-serif,Arial;font-family:var(--client-font-family),Helvetica,Roboto,sans-serif,Arial;font-weight:500}body{font-size:1rem;line-height:1.5rem;line-height:1.5}a{color:#2979bf;color:rgb(var(--primary-color))}*,:before,:after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.container{width:100%;margin-right:auto;margin-left:auto;padding-right:1rem;padding-left:1rem}@media (min-width: 475px){.container{max-width:475px}}@media (min-width: 640px){.container{max-width:640px;padding-right:2rem;padding-left:2rem}}@media (min-width: 768px){.container{max-width:768px;padding-right:2.5rem;padding-left:2.5rem}}@media (min-width: 1024px){.container{max-width:1024px;padding-right:3rem;padding-left:3rem}}@media (min-width: 1280px){.container{max-width:1280px;padding-right:3.5rem;padding-left:3.5rem}}@media (min-width: 1536px){.container{max-width:1536px;padding-right:5rem;padding-left:5rem}}.fixed{position:fixed}.m-0{margin:0}.flex{display:flex}.h-full{height:100%}.h-screen{height:100vh}.w-screen{width:100vw}.p-0{padding:0}</style><link rel="stylesheet" href="./Digio _ Secure, Legal, Digital signing_files/styles.0c502be0dc7a3ff4.css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="styles.0c502be0dc7a3ff4.css"></noscript><script type="text/javascript">(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "hutuhmazcf");</script><style>.alert[_ngcontent-gru-c51]{display:flex;min-width:30%;align-items:center;justify-content:space-between;border-radius:.5rem;padding:1rem;text-align:center;font-size:.875rem;line-height:1.25rem;position:absolute;top:.5rem;left:50%;z-index:999999;transform:translate(-50%)}.alert-loading[_ngcontent-gru-c51]{color:#856404;background-color:#fff3cd;border-color:#ffeeba}</style><style>[_nghost-gru-c50]{display:flex;flex:1 1 0%;flex-direction:column;-webkit-font-smoothing:antialiased!important;-moz-osx-font-smoothing:grayscale!important}@media (pointer: none),(pointer: coarse){.layout[_ngcontent-gru-c50]{position:fixed;height:100%}}.app-main-content[_ngcontent-gru-c50]{height:100%;display:flex;flex:1 1 0%;overflow:hidden}@media (min-width: 768px){.app-main-content[_ngcontent-gru-c50]{width:100%;flex:0 1 auto;align-self:center}}</style><style>[_nghost-gru-c14]{display:flex;flex:1}</style><style>[_nghost-gru-c13]{height:100%;width:100%}.loader[_ngcontent-gru-c13], .loader[_ngcontent-gru-c13]:before, .loader[_ngcontent-gru-c13]:after{border-radius:50%;width:1.7em;height:1.7em;animation-fill-mode:both;animation:bblFadInOut 1.8s infinite ease-in-out}.loader[_ngcontent-gru-c13]{color:rgb(var(--primary-color));font-size:8px;position:relative;text-indent:-9999em;transform:translateZ(0);animation-delay:-.16s}.loader[_ngcontent-gru-c13]:before, .loader[_ngcontent-gru-c13]:after{content:"";position:absolute;top:0}.loader[_ngcontent-gru-c13]:before{left:-3.5em;animation-delay:-.32s}.loader[_ngcontent-gru-c13]:after{left:3.5em}@keyframes bblFadInOut{0%,80%,to{box-shadow:0 2.5em 0 -1.3em}40%{box-shadow:0 2.5em}}</style><style type="text/css"></style><style>[_nghost-gru-c82]{display:flex;height:100%;justify-content:center}.app-doc-preview[_ngcontent-gru-c82]{width:100%}.sign-content[_ngcontent-gru-c82]{display:flex;height:100%;flex-direction:row}.esign-card-center[_ngcontent-gru-c82]{display:flex;width:91.666667%;flex:1 1 0%;justify-content:center;text-align:center}@media (min-width: 768px){.esign-card-center[_ngcontent-gru-c82]{align-items:center}}.esign-bottom-bar[_ngcontent-gru-c82]{z-index:50;display:flex;flex-direction:column;row-gap:.5rem;--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}@media (min-width: 768px){.esign-bottom-bar[_ngcontent-gru-c82]{z-index:auto}}@media (orientation: landscape){@media (min-width: 768px){.esign-bottom-bar[_ngcontent-gru-c82]{flex:1 1 0%;justify-content:space-between;border-radius:0;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;box-shadow:0 0 rgba(0,0,0,0),0 0 rgba(0,0,0,0),var(--tw-shadow);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}}}</style><style>@media (min-width: 768px){[_nghost-gru-c74]{padding:1.25rem 2.5rem}}.noPadding[_nghost-gru-c74]{padding:0}@media (min-width: 768px){.noPadding[_nghost-gru-c74]{padding:0}}.card[_ngcontent-gru-c74]{position:relative;display:flex;width:100%;flex-direction:column;height:100%}@media (min-width: 768px){.card[_ngcontent-gru-c74]{min-height:420px;min-width:500px}}.card[_ngcontent-gru-c74]{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}@media (min-width: 768px){.card[_ngcontent-gru-c74]{border-radius:1rem}}</style><style>[_nghost-gru-c75]{display:flex;flex:1;overflow:hidden}</style><style>[_nghost-gru-c18]{position:sticky;bottom:0px;display:flex;border-radius:1rem;--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));position:-webkit-sticky}</style><style>[_nghost-gru-c15]{overflow:hidden}</style><style>.header-logo[_ngcontent-gru-c98]{max-height:200px;max-width:200px;-o-object-fit:cover;object-fit:cover;padding:.25rem}@media (min-width: 768px){.header-logo[_ngcontent-gru-c98]{padding:0}}@media (min-width: 1024px){.header-logo[_ngcontent-gru-c98]{max-height:200px;max-width:200px}.app-header[_ngcontent-gru-c98]{top:2rem;left:2rem}}.app-header[_ngcontent-gru-c98]{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}@media (min-width: 1024px){.app-header[_ngcontent-gru-c98]{background-color:transparent}}.app-header[_ngcontent-gru-c98]{display:flex;justify-content:space-between}@media (min-width: 768px){.app-header[_ngcontent-gru-c98]{border-style:none}}.app-header[_ngcontent-gru-c98]{padding:1rem}@media (min-width: 768px){.app-header[_ngcontent-gru-c98]{padding:0}}</style><style>[_nghost-gru-c10]{display:flex;align-items:center;justify-content:center;font-size:.875rem;line-height:1.25rem}@media (min-width: 475px){[_nghost-gru-c10]{max-width:75%}}.app-button[_ngcontent-gru-c10]{display:flex;height:2.5rem;width:100%;align-items:center;justify-content:center;padding-top:.5rem;padding-bottom:.5rem;cursor:pointer;text-align:center}.app-button[_ngcontent-gru-c10]:disabled{cursor:not-allowed}.app-button[_ngcontent-gru-c10]{padding-left:2rem;padding-right:2rem;border-radius:.375rem}.btn-primary[_ngcontent-gru-c10]{background-color:rgb(var(--primary-color));font-weight:800;--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.btn-primary[_ngcontent-gru-c10]:disabled{background-color:rgba(var(--primary-color),.4)}.btn-secondary[_ngcontent-gru-c10]{border-width:1px;border-color:rgb(var(--primary-color));--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));color:rgb(var(--primary-color))}.btn-secondary[_ngcontent-gru-c10]:disabled{cursor:not-allowed;--tw-bg-opacity: 1;background-color:rgb(209 213 219 / var(--tw-bg-opacity))}</style><style>[_nghost-gru-c80]{display:flex;flex:1 1 0%}.preview-viewport[_ngcontent-gru-c80]{display:flex;flex:1 1 0%;background-color:transparent;margin-right:.25rem}.preview-item[_ngcontent-gru-c80]{position:relative;padding-top:.5rem;padding-bottom:.25rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.preview-progress-spinner[_ngcontent-gru-c80]{margin:1rem}</style><style>.svg-icon-container[_ngcontent-gru-c16]{display:flex;color:rgb(var(--primary-color))}</style><style>cdk-virtual-scroll-viewport{display:block;position:relative;transform:translateZ(0)}.cdk-virtual-scrollable{overflow:auto;will-change:scroll-position;contain:strict;-webkit-overflow-scrolling:touch}.cdk-virtual-scroll-content-wrapper{position:absolute;top:0;left:0;contain:content}[dir=rtl] .cdk-virtual-scroll-content-wrapper{right:0;left:auto}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper{min-height:100%}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-left:0;padding-right:0;margin-left:0;margin-right:0;border-left-width:0;border-right-width:0;outline:none}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper{min-width:100%}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:0;border-top-width:0;border-bottom-width:0;outline:none}.cdk-virtual-scroll-spacer{height:1px;transform-origin:0 0;flex:0 0 auto}[dir=rtl] .cdk-virtual-scroll-spacer{transform-origin:100% 0}</style><style>[_nghost-gru-c78]{height:100%;width:100%}.loader[_ngcontent-gru-c78]{position:relative;display:block;height:1em;width:1em;animation:mulShdSpin 1.1s infinite ease;border-radius:50%;text-indent:-9999em;transform:translateZ(0)}@keyframes mulShdSpin{0%,to{box-shadow:0 -2.6em 0 0 rgb(var(--primary-color)),1.8em -1.8em 0 0 rgba(var(--primary-color),.2),2.5em 0 0 0 rgba(var(--primary-color),.2),1.75em 1.75em 0 0 rgba(var(--primary-color),.2),0 2.5em 0 0 rgba(var(--primary-color),.2),-1.8em 1.8em 0 0 rgba(var(--primary-color),.2),-2.6em 0 0 0 rgba(var(--primary-color),.5),-1.8em -1.8em 0 0 rgba(var(--primary-color),.7)}12.5%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.7),1.8em -1.8em 0 0 rgb(var(--primary-color)),2.5em 0 0 0 rgba(var(--primary-color),.2),1.75em 1.75em 0 0 rgba(var(--primary-color),.2),0 2.5em 0 0 rgba(var(--primary-color),.2),-1.8em 1.8em 0 0 rgba(var(--primary-color),.2),-2.6em 0 0 0 rgba(var(--primary-color),.2),-1.8em -1.8em 0 0 rgba(var(--primary-color),.5)}25%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.5),1.8em -1.8em 0 0 rgba(var(--primary-color),.7),2.5em 0 0 0 rgb(var(--primary-color)),1.75em 1.75em 0 0 rgba(var(--primary-color),.2),0 2.5em 0 0 rgba(var(--primary-color),.2),-1.8em 1.8em 0 0 rgba(var(--primary-color),.2),-2.6em 0 0 0 rgba(var(--primary-color),.2),-1.8em -1.8em 0 0 rgba(var(--primary-color),.2)}37.5%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.2),1.8em -1.8em 0 0 rgba(var(--primary-color),.5),2.5em 0 0 0 rgba(var(--primary-color),.7),1.75em 1.75em 0 0 rgb(var(--primary-color)),0 2.5em 0 0 rgba(var(--primary-color),.2),-1.8em 1.8em 0 0 rgba(var(--primary-color),.2),-2.6em 0 0 0 rgba(var(--primary-color),.2),-1.8em -1.8em 0 0 rgba(var(--primary-color),.2)}50%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.2),1.8em -1.8em 0 0 rgba(var(--primary-color),.2),2.5em 0 0 0 rgba(var(--primary-color),.5),1.75em 1.75em 0 0 rgba(var(--primary-color),.7),0 2.5em 0 0 rgb(var(--primary-color)),-1.8em 1.8em 0 0 rgba(var(--primary-color),.2),-2.6em 0 0 0 rgba(var(--primary-color),.2),-1.8em -1.8em 0 0 rgba(var(--primary-color),.2)}62.5%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.2),1.8em -1.8em 0 0 rgba(var(--primary-color),.2),2.5em 0 0 0 rgba(var(--primary-color),.2),1.75em 1.75em 0 0 rgba(var(--primary-color),.5),0 2.5em 0 0 rgba(var(--primary-color),.7),-1.8em 1.8em 0 0 rgb(var(--primary-color)),-2.6em 0 0 0 rgba(var(--primary-color),.2),-1.8em -1.8em 0 0 rgba(var(--primary-color),.2)}75%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.2),1.8em -1.8em 0 0 rgba(var(--primary-color),.2),2.5em 0 0 0 rgba(var(--primary-color),.2),1.75em 1.75em 0 0 rgba(var(--primary-color),.2),0 2.5em 0 0 rgba(var(--primary-color),.5),-1.8em 1.8em 0 0 rgba(var(--primary-color),.7),-2.6em 0 0 0 rgb(var(--primary-color)),-1.8em -1.8em 0 0 rgba(var(--primary-color),.2)}87.5%{box-shadow:0 -2.6em 0 0 rgba(var(--primary-color),.2),1.8em -1.8em 0 0 rgba(var(--primary-color),.2),2.5em 0 0 0 rgba(var(--primary-color),.2),1.75em 1.75em 0 0 rgba(var(--primary-color),.2),0 2.5em 0 0 rgba(var(--primary-color),.2),-1.8em 1.8em 0 0 rgba(var(--primary-color),.5),-2.6em 0 0 0 rgba(var(--primary-color),.7),-1.8em -1.8em 0 0 rgb(var(--primary-color))}}</style><style>.app-signature-view[_ngcontent-gru-c79]{position:absolute;z-index:100;white-space:nowrap;border-width:2px;border-style:dotted;border-color:rgb(var(--primary-color));--tw-bg-opacity: 1;background-color:rgb(219 234 254 / var(--tw-bg-opacity));text-align:center;font-size:.875rem;line-height:1.25rem;color:rgb(var(--primary-color));font-size:calc(8px + 4 * (100vw - 300px) / 1300);overflow:hidden;text-overflow:ellipsis}</style><style>.cdk-dialog-container{display:block;width:100%;height:100%;min-height:inherit;max-height:inherit}</style></head>
+<body class="m-0 p-0 fixed w-screen h-screen" style="">
+<script nomodule="">
+  gtag('event', 'exception', Object.assign({
+    'error_message': 'browser not supported',
+    'description': 'browser not supported',
+    'fatal': true
+  }, eventMeta));
+</script>
+<app-root id="app-root" class="flex h-full" _nghost-gru-c52="" ng-version="14.3.0" aria-hidden="true"><alert _ngcontent-gru-c52="" _nghost-gru-c51=""><!----></alert><app-layout _ngcontent-gru-c52="" _nghost-gru-c50=""><div _ngcontent-gru-c50="" class="h-screen flex items-center justify-center w-screen layout"><main _ngcontent-gru-c50="" class="app-main-content"><router-outlet _ngcontent-gru-c50="" class="hidden"></router-outlet><app-esign _nghost-gru-c82=""><app-dsc _ngcontent-gru-c82="" class="app-dsc"></app-dsc><app-card _ngcontent-gru-c82="" class="esign-card-center bg-primary-50" _nghost-gru-c74=""><div _ngcontent-gru-c74="" class="card shadow-component w-full h-full md:max-w-[90%]"><app-card-header _ngcontent-gru-c74="" class="border-b rounded-t-2xl z-10"><div class="text-center h-min md:border-b-0.5 md:border-hotline p-0 md:px-6 md:p-2"><app-header _ngcontent-gru-c74="" _nghost-gru-c98=""><header _ngcontent-gru-c98="" class="app-header border-b border-primary-400 md:border-none z-10"><div _ngcontent-gru-c98="" class="h-full w-full flex items-center justify-between"><div _ngcontent-gru-c98="" class="flex justify-center items-center"><img _ngcontent-gru-c98="" alt="Digio Logo" class="header-logo h-10" src="./Digio _ Secure, Legal, Digital signing_files/logo.svg"></div><div _ngcontent-gru-c98="" class="flex flex-col justify-center items-center float-right"><div _ngcontent-gru-c98="" class="flex flex-row items-center text-xxs p-1"><span _ngcontent-gru-c98="" class="mr-0.5">Secured by</span><img _ngcontent-gru-c98="" alt="Secured by Digio Logo" width="30" height="15" src="./Digio _ Secure, Legal, Digital signing_files/digio-blue.svg"></div></div><!----></div></header></app-header></div></app-card-header><app-card-body _ngcontent-gru-c82="" class="bg-primary-50 md:bg-transparent" _nghost-gru-c75=""><div _ngcontent-gru-c75="" class="flex flex-col flex-1 overflow-hidden overflow-y-auto"><!----><div _ngcontent-gru-c82="" class="sign-content w-full justify-center z-0"><div _ngcontent-gru-c82="" class="flex flex-1 flex-col md:flex-row w-full min-w-[60%]"><div _ngcontent-gru-c82="" class="flex flex-1 flex-col md:items-center w-full bg-transparent bg-none px-3"><app-doc-preview _ngcontent-gru-c82="" class="app-doc-preview !bg-none !bg-transparent shadow-xl" _nghost-gru-c80=""><div _ngcontent-gru-c80="" class="flex flex-1 bg-transparent"><div _ngcontent-gru-c80="" class="flex flex-col flex-1 sm:rounded-lg"><!----><cdk-virtual-scroll-viewport _ngcontent-gru-c80="" appendonly="" class="cdk-virtual-scroll-viewport preview-viewport p-0 w-full pb-3 cdk-virtual-scrollable cdk-virtual-scroll-orientation-vertical"><div class="cdk-virtual-scroll-content-wrapper" style="transform: translateY(0px);"><div _ngcontent-gru-c80="" class="w-full flex bg-primary-50 flex-col items-center justify-start"><div _ngcontent-gru-c80="" class="preview-item scroller relative md:max-w-full w-full"><!----><img _ngcontent-gru-c80="" class="cursor-pointer w-full" src="blob:https://app.digio.in/ec7a4d65-3cae-4272-8e00-0bbf3618ee1c"><!----><div _ngcontent-gru-c80="" class="absolute top-1/2 rounded-sm shadow-lg -right-4 flex items-center mr-6 cursor-pointer"><div _ngcontent-gru-c80="" class="relative z-10 p-2 text-xs leading-none rounded-sm text-white whitespace-no-wrap bg-primary shadow-lg cursor-pointer"> 1 </div><div _ngcontent-gru-c80="" class="w-3 h-3 -ml-2.5 rotate-45 bg-primary cursor-pointer"></div></div><!----><div _ngcontent-gru-c80=""><app-sign-view _ngcontent-gru-c80="" class="app-sign-view" _nghost-gru-c79=""><div _ngcontent-gru-c79="" class="app-signature-view" style="inset: 94.1736% 1.51261% 1.18906% 74.958%;"><div _ngcontent-gru-c79="" class="flex items-start justify-start flex-row h-full w-full"><div _ngcontent-gru-c79="" class="h-full items-center flex w-2/6"><img _ngcontent-gru-c79="" src="./Digio _ Secure, Legal, Digital signing_files/signature.png" class="h-full p-1"></div><div _ngcontent-gru-c79="" class="w-full h-full flex items-center justify-center"><div _ngcontent-gru-c80="" class="truncate w-12 xs:w-16 sm:w-24"> Abnika Garg </div></div></div></div></app-sign-view><!----></div><!----></div><!----></div></div><div class="cdk-virtual-scroll-spacer" style="height: 666px;"></div></cdk-virtual-scroll-viewport></div></div><!----></app-doc-preview></div></div><div _ngcontent-gru-c82="" class="flex flex-col mobile:hidden portrait:hidden px-2 py-2 !w-[330px] max-w-[340px] h-full overflow-auto"><app-doc-information _ngcontent-gru-c82="" _nghost-gru-c81=""><div _ngcontent-gru-c81="" class="document-information flex flex-col w-full"><div _ngcontent-gru-c81="" class="flex flex-row text-lg text-primary my-1 md:mb-3 md:mt-2"><div _ngcontent-gru-c81="" class="hidden md:flex md:items-center"><app-svg-icon _ngcontent-gru-c81="" name="information" class="w-4 h-4" _nghost-gru-c16=""><span _ngcontent-gru-c16="" class="svg-icon-container w-4 h-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 24C5.3724 24 0 18.6276 0 12C0 5.3724 5.3724 0 12 0C18.6276 0 24 5.3724 24 12C24 18.6276 18.6276 24 12 24ZM12 21.6C14.5461 21.6 16.9879 20.5886 18.7882 18.7882C20.5886 16.9879 21.6 14.5461 21.6 12C21.6 9.45392 20.5886 7.01212 18.7882 5.21177C16.9879 3.41143 14.5461 2.4 12 2.4C9.45392 2.4 7.01212 3.41143 5.21177 5.21177C3.41143 7.01212 2.4 9.45392 2.4 12C2.4 14.5461 3.41143 16.9879 5.21177 18.7882C7.01212 20.5886 9.45392 21.6 12 21.6ZM10.8 6H13.2V8.4H10.8V6ZM10.8 10.8H13.2V18H10.8V10.8Z" fill="currentColor"></path>
+</svg>
+</span></app-svg-icon><span _ngcontent-gru-c81="" class="pl-3 pr-1 text-black">Document</span></div><div _ngcontent-gru-c81="" class="flex items-center justify-start text-black">Information</div></div><div _ngcontent-gru-c81="" class="text-start text-primary text-xs md:max-w-min md:whitespace-nowrap md:overflow-hidden md:text-ellipsis"> Document_2023-07-10_131507.pdf </div><div _ngcontent-gru-c81="" class="flex flex-row text-xs justify-between !my-2 border-b pb-3"><div _ngcontent-gru-c81="" class="w-auto flex items-center justify-start"><div _ngcontent-gru-c81="" class="pr-1">Requested:</div><div _ngcontent-gru-c81="" class="text-primary whitespace-nowrap"> 10 Jul 2023 </div></div><div _ngcontent-gru-c81="" class="border-l border-light-grey h-auto pr-1 ml-1"></div><div _ngcontent-gru-c81="" class="w-auto flex items-center justify-start"><div _ngcontent-gru-c81="" class="pr-1">Request Expiring:</div><div _ngcontent-gru-c81="" class="text-primary whitespace-nowrap"> 21 Jul 2023 </div></div></div><div _ngcontent-gru-c81="" class="flex flex-row justify-between !my-2 border-b pb-3"><div _ngcontent-gru-c81="" class="flex flex-col items-start justify-start"><label _ngcontent-gru-c81="" class="text-sm text-primary">Signers</label><div _ngcontent-gru-c81="" class="text-xs text-start whitespace-nowrap"><div _ngcontent-gru-c81="" class="w-full inline-flex"><span _ngcontent-gru-c81="" class="truncate w-auto max-w-[240px]">Abnika Garg</span> &nbsp; (<span _ngcontent-gru-c81="">requested</span>) </div></div><!----></div></div><div _ngcontent-gru-c81="" class="flex flex-row justify-between !my-2 border-b pb-3"><div _ngcontent-gru-c81="" class="flex flex-col items-start justify-start"><label _ngcontent-gru-c81="" class="text-sm text-primary"> Sign Requested By </label><label _ngcontent-gru-c81="" class="text-xs text-start"> Info <span _ngcontent-gru-c81=""> (info@globaldial.in) </span></label></div></div><!----><!----><!----></div></app-doc-information></div><!----></div><!----><!----><!----></div></app-card-body><app-card-footer _ngcontent-gru-c82="" class="w-full p-0" _nghost-gru-c18=""><div _ngcontent-gru-c18="" class="relative flex flex-col min-h-[70px] w-full bg-white sm:bg-transparent border-t"><div _ngcontent-gru-c82="" class="flex flex-col md:flex-1 landscape:md:hidden"><div _ngcontent-gru-c82="" class="esign-bottom-bar"><!----><!----><!----><!----></div></div><div _ngcontent-gru-c82="" class="flex justify-center items-center border-b p-2"><div _ngcontent-gru-c82="" class="flex text-primary text-[8px] xs:text-[10px]"><div _ngcontent-gru-c82="" class="flex flex-row items-center left-5 mx-2 border-r-2 pr-2 text-start cursor-pointer"><div _ngcontent-gru-c82="" class="mr-1"><app-svg-icon _ngcontent-gru-c82="" name="information" class="w-3 h-3" _nghost-gru-c16=""><span _ngcontent-gru-c16="" class="svg-icon-container w-3 h-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 24C5.3724 24 0 18.6276 0 12C0 5.3724 5.3724 0 12 0C18.6276 0 24 5.3724 24 12C24 18.6276 18.6276 24 12 24ZM12 21.6C14.5461 21.6 16.9879 20.5886 18.7882 18.7882C20.5886 16.9879 21.6 14.5461 21.6 12C21.6 9.45392 20.5886 7.01212 18.7882 5.21177C16.9879 3.41143 14.5461 2.4 12 2.4C9.45392 2.4 7.01212 3.41143 5.21177 5.21177C3.41143 7.01212 2.4 9.45392 2.4 12C2.4 14.5461 3.41143 16.9879 5.21177 18.7882C7.01212 20.5886 9.45392 21.6 12 21.6ZM10.8 6H13.2V8.4H10.8V6ZM10.8 10.8H13.2V18H10.8V10.8Z" fill="currentColor"></path>
+</svg>
+</span></app-svg-icon></div><!----><div _ngcontent-gru-c82="" class="group flex relative"><div _ngcontent-gru-c82="" class="group-hover:opacity-100 transition-opacity bg-gray-200 px-2.5 py-0.5 text-xxs text-black rounded-md absolute -left-4 -top-14 whitespace-nowrap translate-y-full opacity-0 my-1 z-50"> Document_2023-07-10_131507.pdf </div><span _ngcontent-gru-c82="" class="truncate w-16 md:max-w-[150px] md:w-auto"> Document_2023-07-10_131507.pdf</span></div></div><!----><!----><div _ngcontent-gru-c82="" class="flex-1 md:mx-3 text-gray-400"> By continuing, I agree to do electronic sign from this platform. </div><!----></div></div><div _ngcontent-gru-c82="" class="min-h-[16px] mt-1"><!----><!----><!----><!----></div><div _ngcontent-gru-c82="" class="flex flex-col gap-y-4 p-3 pt-1 md:items-center"><!----><div _ngcontent-gru-c82="" class="flex flex-row gap-4 w-full justify-center md:!w-2/3"><!----><app-button _ngcontent-gru-c82="" primary="" class="w-2/3 md:w-2/5" _nghost-gru-c10=""><button _ngcontent-gru-c10="" class="app-button btn-primary" type="button"><div _ngcontent-gru-c10="" class="flex flex-row relative">Proceed to Sign <!----></div></button></app-button></div><!----></div><!----><!----></div></app-card-footer></div></app-card><app-modal _ngcontent-gru-c82="" class="hidden md:block md:z-20" _nghost-gru-c15=""><!----></app-modal><app-modal _ngcontent-gru-c82="" _nghost-gru-c15=""><!----></app-modal></app-esign><!----></main></div></app-layout></app-root>
+
+<div class="digio-loader" style="display: flex;flex-direction: column; width : 100%; text-align: center; height: 100%; font-family: &#39;Helvetica&#39;, &#39;Arial&#39;, sans-serif; font-size : 12px; justify-content: center; align-items: center;" aria-hidden="true">
+  <div id="loader">
+    <script>
+      (function() {
+        function removeLoaderHTML(e) {
+          const ldr = document.getElementById('loader');
+          ldr.parentNode.removeChild(ldr);
+          try {
+            document.removeEventListener('GatewayContentLoaded', removeLoaderHTML);
+          } catch (e) {
+            document.detachEvent('GatewayContentLoaded', removeLoaderHTML);
+          }
+        }
+
+        let isGateway;
+        try {
+          let locationString = window.location.toString().split('#/')[1].split('/')[0].toLowerCase();
+          isGateway = (locationString === 'gateway' || locationString === 'enach-mandate-direct');
+        } catch (e) {
+        }
+        if (isGateway) {
+          const element = document.getElementById('loader');
+          element.classList.add('content-loader');
+          try {
+            document.addEventListener('GatewayContentLoaded', removeLoaderHTML);
+          } catch (e) {
+            document.attachEvent('GatewayContentLoaded', removeLoaderHTML);
+          }
+        }
+      })();
+    </script>
+  </div>
+  <div id="interim-gateway-loader">
+    <script>
+      (function() {
+        function removeLoaderHTML(e) {
+          const ldr = document.getElementById('interim-gateway-loader');
+          ldr.parentNode.removeChild(ldr);
+          try {
+            document.removeEventListener('GatewayContentLoaded', removeLoaderHTML);
+          } catch (e) {
+            document.detachEvent('GatewayContentLoaded', removeLoaderHTML);
+          }
+        }
+
+        let isGateway;
+        try {
+          let locationString = window.location.toString().split('#/')[1].split('/')[0].toLowerCase();
+          isGateway = (locationString === 'gateway' || locationString === 'enach-mandate-direct');
+        } catch (e) {
+        }
+        if (isGateway) {
+          const element = document.getElementById('interim-gateway-loader');
+          element.innerHTML = 'Loading Digio...';
+          try {
+            document.addEventListener('GatewayContentLoaded', removeLoaderHTML);
+          } catch (e) {
+            document.attachEvent('GatewayContentLoaded', removeLoaderHTML);
+          }
+        }
+      })();
+    </script>
+  </div>
+</div>
+
+<div id="unsupported-browser" style="display: none" aria-hidden="true">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .title {
+      color: #333333;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      display: none;
+      color: #666666;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .browser-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .browser-item {
+      display: none;
+      margin-bottom: 10px;
+    }
+
+    .browser-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .webview-instruction {
+      color: #666666;
+    }
+
+    .browser-logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  </style>
+  <div class="container">
+    <h1 class="title">Unsupported Browser</h1>
+    <p class="message top-message">We're sorry, but your current browser is not supported.</p>
+    <p class="message browser">Please consider upgrading to one of the following supported browsers:</p>
+    <p class="message android">Please consider upgrading the following from Play store to continue:</p>
+    <ul class="browser-list">
+      <li class="browser-item general">
+        <a href="https://www.google.com/chrome/" class="browser-link">
+          <img id="chrome" alt="Google Chrome" class="browser-logo">
+          Google Chrome &gt; 60
+        </a>
+      </li>
+      <li class="browser-item general">
+        <a href="https://www.mozilla.org/en-US/firefox/new/" class="browser-link">
+          <img id="firefox" alt="Mozilla Firefox" class="browser-logo">
+          Mozilla Firefox &gt; 60
+        </a>
+      </li>
+      <li class="browser-item safari">
+        <a href="https://www.apple.com/safari/" class="browser-link">
+          <img id="safari" alt="Apple Safari" class="browser-logo">
+          Apple Safari &gt; 10
+        </a>
+      </li>
+      <li class="browser-item android-sdk">
+        <div class="browser-link">
+          <img id="android-sdk" alt="Android Webview" class="browser-logo">
+          <a target="_blank" href="market://details?id=com.google.android.webview" class="browser-link">
+            Android System Webview
+          </a>
+        </div>
+      </li>
+      <li class="browser-item webview">
+        <div class="browser-link">
+          <img id="webview" alt="Android Webview" class="browser-logo">
+          <a class="browser-link">
+            Android System Webview
+          </a>
+        </div>
+      </li>
+      <li class="browser-item webview-instruction">
+        <div>
+          <ul>1. Go to Play store app.</ul>
+          <ul>2. Search for "Android System Webview"</ul>
+          <ul>3. Click on the "Update" button.</ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="cookies-disabled" style="display: none;" aria-hidden="true">
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cookie-instructions {
+      text-align: start;
+      margin-top: 10px;
+      display: none;
+    }
+
+  </style>
+  <div class="container">
+    <h1>Enable Cookies and site data</h1>
+    <h2>
+      Cookies and site data are disabled in your browser. To enable cookies, please follow the instructions below:
+    </h2>
+    <ol id="google-chrome" class="cookie-instructions">
+      <li>1. Click the three-dot menu icon in the top right corner of the browser window.</li>
+      <li>2. Go to <strong>Settings</strong>.</li>
+      <li>3. Scroll down and click on <strong>Privacy and security</strong> in the left menu.</li>
+      <li>4. Click on <strong>Cookies and other site data</strong>.</li>
+      <li>5. Toggle the switch to enable <strong>Allow all cookies</strong>.</li>
+    </ol>
+
+    <ol id="mozilla-firefox" class="cookie-instructions">
+      <li>1. Click the three-line menu icon in the top right corner of the browser window.</li>
+      <li>2. Go to <strong>Options</strong>.</li>
+      <li>3. Select <strong>Privacy &amp; Security</strong> from the left menu.</li>
+      <li>4. Under the <strong>Cookies and Site Data</strong> section, click on <strong>Manage Permissions</strong>.
+      </li>
+      <li>5. Make sure the checkbox for <strong>Allow sites to set cookies</strong> is checked.</li>
+    </ol>
+
+    <ol id="microsoft-edge" class="cookie-instructions">
+      <li>1. Click the three-dot menu icon in the top right corner of the browser window.</li>
+      <li>2. Go to <strong>Settings</strong>.</li>
+      <li>3. Click on <strong>Privacy, search, and services</strong> in the left menu.</li>
+      <li>4. Under the <strong>Cookies and site permissions</strong> section, click on <strong>Cookies and site
+        data</strong>.
+      </li>
+      <li>5. Toggle the switch to enable <strong>Allow sites to save and read cookie data</strong>.</li>
+    </ol>
+
+    <ol id="apple-safari" class="cookie-instructions">
+      <li>1. Click on <strong>Safari</strong> in the top menu bar.</li>
+      <li>2. Select <strong>Preferences</strong>.</li>
+      <li>3. Go to the <strong>Privacy</strong> tab.</li>
+      <li>4. Under the <strong>Cookies and website data</strong> section, select <strong>Always allow</strong>.</li>
+    </ol>
+
+    <ol id="opera" class="cookie-instructions">
+      <li>1. Click the red "O" menu icon in the top left corner of the browser window.</li>
+      <li>2. Go to <strong>Settings</strong>.</li>
+      <li>3. Click on <strong>Advanced</strong> in the left menu.</li>
+      <li>4. Go to the <strong>Privacy &amp; Security</strong> section.</li>
+      <li>5. Under the <strong>Cookies</strong> section, select <strong>Allow local data to be set
+        (recommended)</strong>.
+      </li>
+    </ol>
+  </div>
+</div>
+<script>
+  function isSessionStorageEnabled() {
+    try {
+      if (window.sessionStorage) {
+        return true;
+      }
+    } catch (err) {
+      return false;
+    }
+  }
+
+  if (!isSessionStorageEnabled()) {
+    document.getElementsByClassName('digio-loader')[0].remove();
+    document.getElementById('cookies-disabled').style.display = 'block';
+    document.getElementById('app-root').remove();
+    userAgent = window.navigator.userAgent.toLowerCase();
+    chrome = /chrome/.test(userAgent);
+    firefox = /firefox/.test(userAgent);
+    safari = /safari/.test(userAgent);
+    edge = /edg/.test(userAgent);
+    opera = /opera/.test(userAgent);
+    if (chrome) {
+      document.getElementById('google-chrome').style.display = 'block';
+    } else if (firefox) {
+      document.getElementById('mozilla-firefox').style.display = 'block';
+    } else if (edge) {
+      document.getElementById('microsoft-edge').style.display = 'block';
+    } else if (opera) {
+      document.getElementById('opera').style.display = 'block';
+    } else if (safari) {
+      document.getElementById('apple-safari').style.display = 'block';
+    } else {
+      document.getElementById('google-chrome').style.display = 'block';
+    }
+  }
+</script>
+<script async="" defer="" src="./Digio _ Secure, Legal, Digital signing_files/api.js.download"></script>
+<script nomodule="">
+  userAgent = window.navigator.userAgent.toLowerCase();
+  safari = /safari/.test(userAgent);
+  ios = /iphone|ipod|ipad/.test(userAgent);
+  isAndroid = /android/i.test(userAgent);
+
+  isSafari = /(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent);
+  isAndroidWebview = !ios && userAgent.includes('wv');
+
+  document.getElementsByClassName('digio-loader')[0].remove();
+  document.getElementById('app-root').remove();
+  document.getElementById('unsupported-browser').style.display = 'block';
+  document.getElementsByClassName('top-message')[0].style.display = 'block';
+
+  if (isAndroidWebview) {
+    const urlParams = new URLSearchParams(window.location.href);
+    const androidSdkVersion = urlParams.get('android_sdk_version');
+    document.getElementsByClassName('android')[0].style.display = 'block';
+    if (androidSdkVersion >= '4.0.0') {
+      document.getElementsByClassName('android-sdk')[0].style.display = 'block';
+      document.getElementById('android-sdk').src = '/assets/webview.png';
+    } else {
+      document.getElementsByClassName('webview-instruction')[0].style.display = 'block';
+      document.getElementsByClassName('webview')[0].style.display = 'block';
+      document.getElementById('webview').src = '/assets/webview.png';
+    }
+  } else if (isSafari) {
+    document.getElementsByClassName('safari')[0].style.display = 'block';
+    document.getElementById('safari').src = '/assets/safari.png';
+    document.getElementsByClassName('browser')[0].style.display = 'block';
+  } else {
+    document.getElementsByClassName('general')[0].style.display = 'block';
+    document.getElementById('chrome').src = '/assets/chrome.png';
+    document.getElementsByClassName('general')[1].style.display = 'block';
+    document.getElementById('firefox').src = '/assets/firefox.png';
+    document.getElementsByClassName('safari')[0].style.display = 'block';
+    document.getElementById('safari').src = '/assets/safari.png';
+    if (isAndroid) {
+      document.getElementsByClassName('android')[0].style.display = 'block';
+      document.getElementsByClassName('webview')[0].style.display = 'block';
+      document.getElementById('webview').src = '/assets/webview.png';
+      document.getElementsByClassName('webview-instruction')[0].style.display = 'block';
+    } else {
+      document.getElementsByClassName('browser')[0].style.display = 'block';
+    }
+  }
+</script>
+<!-- <script src="https://meet.digio.in/libs/lib-jitsi-meet.min.js"></script> -->
+<script src="./Digio _ Secure, Legal, Digital signing_files/runtime.9e374c665d7dadae.js.download" type="module"></script><script src="./Digio _ Secure, Legal, Digital signing_files/polyfills.8b351e306a5c8927.js.download" type="module"></script><script src="./Digio _ Secure, Legal, Digital signing_files/vendor.b34b9c216200df67.js.download" type="module"></script><script src="./Digio _ Secure, Legal, Digital signing_files/main.d7fc7e4bcd5fac09.js.download" type="module"></script>
+
+<div class="cdk-overlay-container"><div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div><div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: flex-start; align-items: flex-start;"><div id="cdk-overlay-1" class="cdk-overlay-pane" style="width: 100%; height: 100%; position: static; margin-left: 0px; margin-top: 0px; margin-right: 0px;"><div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><cdk-dialog-container tabindex="-1" class="cdk-dialog-container" id="cdk-dialog-1" role="dialog" aria-modal="true"><app-doc-preview _nghost-gru-c80=""><div _ngcontent-gru-c80="" class="flex flex-1 bg-transparent w-full flex-col md:p-10 h-screen"><div _ngcontent-gru-c80="" class="flex flex-col flex-1 sm:rounded-lg bg-white"><div _ngcontent-gru-c80="" class="flex flex-row p-2 justify-between border-b border-b-bor"><div _ngcontent-gru-c80="" class="text-primary w-full flex items-center justify-center"> Document_2023-07-10_131507.pdf </div><div _ngcontent-gru-c80=""></div><div _ngcontent-gru-c80="" class="flex bg-[#eee] rounded"></div><span _ngcontent-gru-c80="" class="p-1"><fa-icon _ngcontent-gru-c80="" class="ng-fa-icon cursor-pointer"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></fa-icon></span></div><!----><cdk-virtual-scroll-viewport _ngcontent-gru-c80="" appendonly="" class="cdk-virtual-scroll-viewport preview-viewport p-0 w-full pb-3 cdk-virtual-scrollable mb-1 bg-primary-50 cdk-virtual-scroll-orientation-vertical"><div class="cdk-virtual-scroll-content-wrapper" style="transform: translateY(0px);"><div _ngcontent-gru-c80="" class="w-full flex bg-primary-50 flex-col items-center justify-start"><div _ngcontent-gru-c80="" class="preview-item scroller relative !h-min !py-2 w-full md:!max-w-full"><!----><img _ngcontent-gru-c80="" class="cursor-pointer w-full" src="blob:https://app.digio.in/ec7a4d65-3cae-4272-8e00-0bbf3618ee1c"><!----><!----><!----></div><!----></div></div><div class="cdk-virtual-scroll-spacer" style="height: 666px;"></div></cdk-virtual-scroll-viewport></div></div><!----></app-doc-preview><!----></cdk-dialog-container><div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div></div></div></div></body></html>

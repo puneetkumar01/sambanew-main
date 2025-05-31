@@ -1,0 +1,2 @@
+D:/personal/p/sambanew-main/android/app/.cxx/RelWithDebInfo/603p2q25/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/personal/p/sambanew-main/android/app/.cxx/RelWithDebInfo/603p2q25/arm64-v8a/CMakeFiles/rebuild_cache.dir
