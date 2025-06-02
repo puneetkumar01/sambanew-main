@@ -1,5 +1,5 @@
 class AppUrls {
-  static const String appName = 'TicketerRama';
+  static const String appName = 'Ticketer';
   static const double appVersion = 1.0;
   static const String baseUrl = 'https://apifrontv2.ticketer.sg';
   static const String baseLoginUrl = 'https://apiloginv2.ticketer.sg';
