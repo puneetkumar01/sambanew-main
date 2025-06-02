@@ -31,16 +31,16 @@ class SocialLogin extends StatelessWidget {
           //       )));
         if (kIsWeb) {
           // For web, open the URL in a new browser tab
-          if (await canLaunchUrl(Uri.parse( "https://api.samba.events/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile"))) {
-            await launchUrl(Uri.parse( "https://api.samba.events/FrontLogin/social-login?loginfrom=$webview&returnUrl=http://localhost:61799/#/social-login"), mode: LaunchMode.externalNonBrowserApplication);
+          if (await canLaunchUrl(Uri.parse( "https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile"))) {
+            await launchUrl(Uri.parse( "https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=http://localhost:61799/#/social-login"), mode: LaunchMode.externalNonBrowserApplication);
           } else {
-            debugPrint("Could not launch https://api.samba.events/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile");
+            debugPrint("Could not launch https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile");
           }
         } else if (Platform.isAndroid || Platform.isIOS) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => webView(
                   url:
-                      "https://api.samba.events/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile", type: webview,
+                      "https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile", type: webview,
                 )));
 
       };
