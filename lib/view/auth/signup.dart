@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../components/button.dart';
 import '../../components/input_field.dart';
 import '../../controller/authController.dart';
+import '../../util/app_urls.dart';
 import '../../util/config.dart';
 import 'components/social_logins.dart';
 
@@ -16,7 +17,7 @@ class SignUp extends StatelessWidget {
   SignUp({super.key});
   final signupformKey = GlobalKey<FormState>();
   launch() async {
-    final Uri url2 = Uri.parse("https://samba.events/Privacy");
+    final Uri url2 = Uri.parse(AppUrls.baseUrl + "/Privacy");
     try {
       if (!await launchUrl(url2)) {
         throw Exception('Could not launch $url2');

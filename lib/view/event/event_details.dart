@@ -10,6 +10,7 @@ import 'package:intl/intl.dart';
 import 'package:sambanew/controller/eventController.dart';
 import '../../service/date_converter.dart';
 import '../../theme/apptheme.dart';
+import '../../util/app_urls.dart';
 import '../../util/config.dart';
 
 class EventDetails extends StatelessWidget {
@@ -91,7 +92,7 @@ class EventDetails extends StatelessWidget {
                     IconButton(
                         onPressed: () {
                           controller.shareContent(
-                              "https://samba.events/eventDetail/${controller.eventData.first.eventInfo!.eventCode}/${controller.eventData.first.eventInfo!.eventName!.replaceAll(" ", "-")}",
+                              AppUrls.baseUrl + "/eventDetail/${controller.eventData.first.eventInfo!.eventCode}/${controller.eventData.first.eventInfo!.eventName!.replaceAll(" ", "-")}",
                               controller.eventData.first.eventInfo!
                                       .eventBannerImagePath! +
                                   controller.eventData.first.eventInfo!

@@ -6,6 +6,7 @@ import 'package:sambanew/controller/ticketsController.dart';
 import 'package:sambanew/theme/apptheme.dart';
 import '../../../components/button.dart';
 import '../../../service/date_converter.dart';
+import 'add_ons.dart';
 import 'components/event_header.dart';
 
 class PaymentGateway extends StatefulWidget {

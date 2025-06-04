@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../../util/app_urls.dart';
 import '../../../util/config.dart';
 import '../web_page.dart';
 
@@ -31,10 +32,10 @@ class SocialLogin extends StatelessWidget {
           //       )));
         if (kIsWeb) {
           // For web, open the URL in a new browser tab
-          if (await canLaunchUrl(Uri.parse( "https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile"))) {
-            await launchUrl(Uri.parse( "https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=http://localhost:61799/#/social-login"), mode: LaunchMode.externalNonBrowserApplication);
+          if (await canLaunchUrl(Uri.parse( AppUrls.baseUrl + "/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile"))) {
+            await launchUrl(Uri.parse( AppUrls.baseUrl + "/FrontLogin/social-login?loginfrom=$webview&returnUrl=http://localhost:61799/#/social-login"), mode: LaunchMode.externalNonBrowserApplication);
           } else {
-            debugPrint("Could not launch https://apiloginv2.ticketer.sg/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile");
+            debugPrint("Could not launch "+AppUrls.baseUrl +"/FrontLogin/social-login?loginfrom=$webview&returnUrl=mobile");
           }
         } else if (Platform.isAndroid || Platform.isIOS) {
         Navigator.of(context).push(MaterialPageRoute(

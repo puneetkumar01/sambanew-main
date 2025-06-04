@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sambanew/models/AddOnModel.dart';
@@ -15,6 +16,7 @@ import '../models/PaymentGatewayModel.dart';
 import '../service/event_repo.dart';
 import '../service/shared_pref.dart';
 import '../theme/apptheme.dart';
+import '../util/app_urls.dart';
 import '../view/event/bookings/add_ons.dart';
 import '../view/event/bookings/booking_loaderpage.dart';
 
@@ -595,12 +597,19 @@ class TicketController extends GetxController with GetTickerProviderStateMixin {
                 netTotal: double.parse(total.toString()),
                 tno: "",
                 bkno: decodedData["data"][0]["bookingNo"]));
-          } else {
-            Get.to(webPaymentView(
-                bkNo: decodedData["data"][0]["bookingNo"],
+          }
+          else {
+            Fluttertoast.showToast(
+                      msg: "Ticket Booked Successfully",
+                      backgroundColor: Colors.green,
+                      gravity: ToastGravity.TOP,
+                      textColor: Colors.white);
+                  Get.offAllNamed("/");
+          /* Get.to(webPaymentView(
+                bkNo: decodedData["data"][0]["bookingNo"]?? "",
                 nettotal: double.parse(total.toString()),
                 url:
-                    "https://samba.events/Intouchgroup/Index/${decodedData["data"][0]["bookingNo"]}"));
+                AppUrls.baseUrl + "/Intouchgroup/Index/${decodedData["data"][0]["bookingNo"]}"));*/
           }
           break;
         case 401:
