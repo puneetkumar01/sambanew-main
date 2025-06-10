@@ -418,16 +418,14 @@ class OrderSummary extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Button(
                         tittle: double.parse(controller.totalAmt.toString())>0?"pay another way".toUpperCase():"CONTINUE",
-                        tap: () {
-                          Get.to(
-                            const PaymentGateway(),
-                            fullscreenDialog: true,
-                          );
-                      //    if(double.parse(controller.totalAmt.toString())>0){
+                        tap: () async {
+                          await controller.getPaymentGateway(events.first.eventInfo!.eventId);
+                          if (controller.paymentGatewayList.isNotEmpty) {
+                            Get.to(const PaymentGateway(), fullscreenDialog: true);
+                          } else {
+                            Get.snackbar("Error", "No payment gateway found");
+                          }
 
-                          
-                          controller.getPaymentGateway(
-                              events.first.eventInfo!.eventId);//}
                         }),
                   ),
                 ])));

@@ -554,7 +554,7 @@ class EventService {
     }
   }
 
-  Future<Response> apiCheckout(
+  Future<Response> apiCheckout(eventPGFeeId,
       eventid, eventCode, netTotal, name, email, mobile,dynamicJsonCheckoutJson) async {
     var token = PreferenceUtils.getString("token");
     var session = PreferenceUtils.getString("localSession");
@@ -576,7 +576,7 @@ class EventService {
             "email": email,
             "dynamicCheckoutJson": dynamicJsonCheckoutJson.toString(),
             "dynamicCheckoutJsonClean": "",
-            "eventPGFeeId": 13,
+            "eventPGFeeId": int.parse(eventPGFeeId.toString()),
             "createdUserId": 0,
             "eventUTMLinkCode": "",
             "eventAffiliateCode": "",

@@ -577,13 +577,13 @@ class TicketController extends GetxController with GetTickerProviderStateMixin {
     });
   }
 
-  void checkout(eventid, eventCode, total) async {
+  void checkout(eventPGFeeId,eventid, eventCode, total) async {
     //cartItem.clear();
     DialogHelper.showLoading(
       "",
     );
     service
-        .apiCheckout(eventid, eventCode, total, name.text, email.text,
+        .apiCheckout(eventPGFeeId,eventid, eventCode, total, name.text, email.text,
             mobile.text, dynamicJsonCheckoutJson)
         .then((value) {
       DialogHelper.hideLoading();
@@ -625,70 +625,64 @@ class TicketController extends GetxController with GetTickerProviderStateMixin {
   }
 
   List<PaymentGatewayModel> paymentGatewayList = [];
-  void getPaymentGateway(eventid) async {
+
+  Future<void> getPaymentGateway(eventid) async {
     paymentGatewayList.clear();
 
-    service.apiGetPaymentGateway(eventid).then((value) {
-      switch (value.statusCode) {
-        case 200:
-          loadedPaymentGateway = true;
-          final decodedData = jsonDecode(value.data);
-          paymentGatewayList.add(PaymentGatewayModel.fromJson(decodedData));
-          if (paymentGatewayList.isNotEmpty) {
-            applyPaymentGateway(eventid,
-                paymentGatewayList.first.data!.first.paymodes![0].eventPGFeeId);
-          }
-          update();
-          break;
-        case 401:
-          Get.offAndToNamed("/login");
-          //  DialogHelper.showErroDialog(description: "Token not valid");
-          break;
-        case 1:
-          break;
-        default:
-          loadedPaymentGateway = true;
-          update();
-          break;
-      }
-    });
+    final value = await service.apiGetPaymentGateway(eventid);
+    switch (value.statusCode) {
+      case 200:
+        loadedPaymentGateway = true;
+        final decodedData = jsonDecode(value.data);
+        paymentGatewayList.add(PaymentGatewayModel.fromJson(decodedData));
+
+        if (paymentGatewayList.isNotEmpty) {
+          await applyPaymentGateway(
+            eventid,
+            paymentGatewayList.first.data!.first.paymodes![0].eventPGFeeId,
+          );
+        }
+
+        break;
+      case 401:
+        Get.offAndToNamed("/login");
+        break;
+      default:
+        loadedPaymentGateway = true;
+        break;
+    }
+    update();
   }
 
+
+
   bool loadedPaymentGateway = false;
-  void applyPaymentGateway(eventid, eventFeeid) async {
-    //cartItem.clear();
-    DialogHelper.showLoading(
-      "",
-    );
-    service.apiPaymentGatewayCharges(eventid, 13).then((value) {
+  Future<void> applyPaymentGateway(eventid, eventPGFeeId) async {
+    DialogHelper.showLoading("");
+    try {
+      final value = await service.apiPaymentGatewayCharges(eventid, eventPGFeeId);
       DialogHelper.hideLoading();
       switch (value.statusCode) {
         case 200:
           final decodedData = jsonDecode(value.data);
-          //  loadedPaymentGateway = true;
           totalprice = decodedData["data"][0]["cost"].toString();
           totalAmt = decodedData["data"][0]["netTotal"].toString();
-
           tax1 = decodedData["data"][0]["pgFeeTax1"].toString();
           tax2 = decodedData["data"][0]["pgFeeTax2"].toString();
           pgCharges = decodedData["data"][0]["pgFee"].toString();
-          update();
-
-          // update();
           break;
         case 401:
           Get.offAndToNamed("/login");
-          //  DialogHelper.showErroDialog(description: "Token not valid");
-          break;
-        case 1:
           break;
         default:
-          //  loadedPaymentGateway = true;
-          update();
           break;
       }
-    });
+    } finally {
+      DialogHelper.hideLoading();
+      update();
+    }
   }
+
 
   static const int timerDuration = 15 * 60; // 15 minutes in seconds
   var timeRemaining = timerDuration.obs;

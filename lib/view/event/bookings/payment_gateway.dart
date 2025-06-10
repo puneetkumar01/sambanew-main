@@ -18,9 +18,18 @@ class PaymentGateway extends StatefulWidget {
 
 class _PromoCodePageState extends State<PaymentGateway> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  var selectedEventPGFeeId=0;
+  int selectedIndex = 0;
   @override
   void initState() {
     super.initState();
+    final controller = Get.find<TicketController>();
+    if (controller.paymentGatewayList.isNotEmpty &&
+        controller.paymentGatewayList.first.data!.isNotEmpty &&
+        controller.paymentGatewayList.first.data!.first.paymodes!.isNotEmpty) {
+      selectedEventPGFeeId =
+      controller.paymentGatewayList.first.data!.first.paymodes!.first.eventPGFeeId!;
+    }
   }
 
   @override
@@ -88,52 +97,58 @@ class _PromoCodePageState extends State<PaymentGateway> {
                           margin: const EdgeInsets.symmetric(horizontal: 12),
                           decoration: BoxDecoration(
                               border:
-                                  Border.all(color: AppTheme.border, width: 1),
+                              Border.all(color: AppTheme.border, width: 1),
                               borderRadius: BorderRadius.circular(12)),
                           child: ListView.builder(
                               shrinkWrap: true,
                               padding: EdgeInsets.zero,
                               primary: false,
                               itemCount: controller
-                                  .paymentGatewayList.first.data!.length,
+                                  .paymentGatewayList.first.data![0].paymodes!.length,
                               itemBuilder: (ctx, index) => Container(
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            bottom: index == 0
-                                                ? BorderSide.none
-                                                : const BorderSide(width: 0.3))),
-                                    child: Theme(
-                                      data: Theme.of(context).copyWith(
-                                        listTileTheme: const ListTileThemeData(
-                                          horizontalTitleGap:
-                                              4, //here adjust based on your need
-                                        ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 5, vertical: 4.0),
-                                        child: RadioListTile(
-                                          value: index,
-                                          contentPadding: EdgeInsets.zero,
-                                          visualDensity: VisualDensity.compact,
-                                          secondary: Padding(
-                                            padding: const EdgeInsets.only(
-                                                right: 10),
-                                            child: Image.network(
-                                              "${controller.paymentGatewayList.first.data![index].paymodes![0].imagePath}${controller.paymentGatewayList.first.data![index].paymodes![0].imageName}",
-                                              height: 30,
-                                            ),
-                                          ),
-                                          dense:
-                                              true, // Set dense to true to reduce the space
-                                          groupValue: 0,
-                                          onChanged: (ind) {},
-                                          title: Text(
-                                              "${controller.paymentGatewayList.first.data![index].paymodes![0].paymode}"),
-                                        ),
-                                      ),
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: index == controller.paymentGatewayList.first.data![0].paymodes!.length - 1
+                                            ? BorderSide.none
+                                            : const BorderSide(width: 0.3))),
+                                child: Theme(
+                                  data: Theme.of(context).copyWith(
+                                    listTileTheme: const ListTileThemeData(
+                                      horizontalTitleGap:
+                                      4, //here adjust based on your need
                                     ),
-                                  )),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5, vertical: 4.0),
+                                    child: RadioListTile(
+                                      value: index,
+                                      groupValue: selectedIndex,
+                                      onChanged: (int? ind) {
+                                        setState(() {
+                                          selectedIndex = ind!;
+                                          selectedEventPGFeeId=controller.paymentGatewayList.first.data![0].paymodes![selectedIndex].eventPGFeeId!;
+                                        });
+                                      },
+                                      contentPadding: EdgeInsets.zero,
+                                      visualDensity: VisualDensity.compact,
+                                      secondary: Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 10),
+                                        child: Image.network(
+                                          "${controller.paymentGatewayList.first.data![0].paymodes![index].imagePath}${controller.paymentGatewayList.first.data![0].paymodes![index].imageName}",
+                                          height: 30,
+                                        ),
+                                      ),
+                                      dense:
+                                      true, // Set dense to true to reduce the space
+
+                                      title: Text(
+                                          "${controller.paymentGatewayList.first.data![0].paymodes![index].paymode}"),
+                                    ),
+                                  ),
+                                ),
+                              )),
                         ),
                     const SizedBox(
                       height: 20,
@@ -425,7 +440,7 @@ class _PromoCodePageState extends State<PaymentGateway> {
                                   ? "Pay now".toUpperCase()
                                   : "Reserve Tickets".toUpperCase(),
                           tap: () {
-                            controller.checkout(
+                            controller.checkout(selectedEventPGFeeId,
                               events.first.eventInfo!.eventId,
                               events.first.eventInfo!.eventCode,
                               controller.totalAmt,
